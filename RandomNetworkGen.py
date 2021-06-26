@@ -36,7 +36,7 @@ ContList=[]
 def ContLister():
     ContList.clear()
     for i in range(len(PList)):
-        ContList.append(sum(PList[0, i])/sum(Plist))
+        ContList.append(sum(PList[0:i])/sum(PList))
     ContList.append(1)
 
 NodeList=[]
@@ -45,7 +45,7 @@ NodeList.append([Point1, Point2])
 IList[Point1-1]=IList[Point1-1]+1
 IList[Point2-1]=IList[Point2-1]+1
 PLister()
-ContLister[]
+ContLister()
 
 for i in range(edges-1):
     Token=random.uniform(0, 1)
@@ -58,3 +58,5 @@ for i in range(edges-1):
                 PLister()
                 ContLister()
                 break
+
+#Work in Progress..
