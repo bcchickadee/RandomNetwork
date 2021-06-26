@@ -32,12 +32,29 @@ def PLister():
     for Element in IList:
         PList.append(Element/(sum(IList)))
 
+ContList=[]
+def ContLister():
+    ContList.clear()
+    for i in range(len(PList)):
+        ContList.append(sum(PList[0, i])/sum(Plist))
+    ContList.append(1)
+
 NodeList=[]
 Point1, Point2=random.randrange(1, nodes), random.randrange(1, nodes)
 NodeList.append([Point1, Point2])
 IList[Point1-1]=IList[Point1-1]+1
 IList[Point2-1]=IList[Point2-1]+1
 PLister()
+ContLister[]
 
 for i in range(edges-1):
-    #
+    Token=random.uniform(0, 1)
+    while True:
+        for i in range(len(ContList)-1):
+            if ContList[i]<=Token<ContList[i+1]:
+                NodeList.append([i, i+1])
+                IList[Point1-1]=IList[Point1-1]+1
+                IList[Point2-1]=IList[Point2-1]+1
+                PLister()
+                ContLister()
+                break
