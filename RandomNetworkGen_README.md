@@ -14,3 +14,5 @@ Program Algorithm
 
 The number of nodes and edges will be based on user input.
 To keep track of how many edges there are connected to a node, we will make a list with a “Token” in it. One token refers to each node. Starting from 1, a token is defined by the number of edges connected to that referring node +1.
+
+Therefore IList=[1, 1, 1, 1, …, 1] [len(IList)=Nodes)]
