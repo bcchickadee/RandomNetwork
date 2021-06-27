@@ -62,6 +62,10 @@ for i in range(nodes):
     plt.plot(x, y, 'ro')
     plt.annotate(str(i+1), (x, y))
 # For visualization, randomly visualize dots (following a Gaussian distribtion).
+# Visualization enhancement: for nodes with many edges, we want them to be close to the center.
+# Therefore, we use the PList element; the distance from the center should be the inverse of the element.
+# The angle in which the element is located from the center is decided randomly (random.uniform).
+# In conclusion, the NodePlot and plotting section should be moved to the back so that PList works.
 
 for i in range(edges-1):
     RT1=random.uniform(0, 1)
@@ -95,3 +99,7 @@ for i in EdgeList:
 
 # Work in Progress..
 # Adjacency Matrix Required!
+
+print('Density: '+str((edges)/(nodes*(nodes-1)/2)))
+plt.title('Random Network of '+str(nodes)+' Nodes and '+str(edges)+' Edges')
+plt.show()
