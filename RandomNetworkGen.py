@@ -39,9 +39,9 @@ def ContLister():
         ContList.append(sum(PList[0:i])/sum(PList))
     ContList.append(1)
 
-NodeList=[]
+EdgeList=[]
 Point1, Point2=random.randrange(1, nodes), random.randrange(1, nodes)
-NodeList.append([Point1, Point2])
+EdgeList.append([Point1, Point2])
 IList[Point1-1]=IList[Point1-1]+1
 IList[Point2-1]=IList[Point2-1]+1
 PLister()
@@ -52,7 +52,7 @@ for i in range(edges-1):
     while True:
         for i in range(len(ContList)-1):
             if ContList[i]<=Token<ContList[i+1]:
-                NodeList.append([i, i+1])
+                EdgeList.append([i, i+1])
                 IList[Point1-1]=IList[Point1-1]+1
                 IList[Point2-1]=IList[Point2-1]+1
                 PLister()
