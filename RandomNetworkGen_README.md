@@ -16,8 +16,11 @@ The number of nodes and edges will be based on user input.
 To keep track of how many edges there are connected to a node, we will make a list with a “Token” in it. One token refers to each node. Starting from 1, a token is defined by the number of edges connected to that referring node +1.
 
 Therefore,
-IList=[1, 1, 1, 1, …, 1] [len(IList)=Nodes)]
+TokenList=[1, 1, 1, 1, …, 1] [len(TokenList)=Nodes)]
 
 There has to be a list showing what edges are active; we name it EdgeList. Each edge is represented by a list: if Node 1 and 2 is connected, then the element [1, 2] will be added to EdgeList.
+
+For every operation, we need to calculate each probability for each node to be selected; as a result, we make PList.
+Furthermore, we need ContList, which shows the probability continuously (the sum of a node and all elements before a node). This is because we need to pick a node randomly, while also considering the tokens.
 
 For the first operation, one selects two random nodes and then connects it.
